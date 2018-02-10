@@ -5,32 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="32dp"
+    android:padding="16dp"
     tools:context="org.wncc_iitb.papita.LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
         android:paddingBottom="8dp"
-        android:text="Username" />
+        android:text="@string/username_label" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:id="@+id/email_text"
         android:paddingBottom="8dp"
-        android:hint="Enter your username"/>
+        android:hint="Enter your email"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:paddingBottom="8dp"
-        android:text="Password" />
+        android:text="@string/password_label" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/password_edit_text"
         android:paddingBottom="8dp"
         android:hint="Enter your password" />
 
@@ -46,6 +49,8 @@
             android:layout_height="48dp"
             android:background="@color/colorPrimaryDark"
             android:textColor="@color/colorTextLight"
+            android:id="@+id/login_button"
+            android:layout_margin="8dp"
             android:padding="8dp"
             android:text="Login" />
 
@@ -53,6 +58,9 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="48dp"
+            android:background="@color/colorSecondaryDark"
+            android:textColor="@color/colorTextLight"
+            android:layout_margin="8dp"
             android:padding="8dp"
             android:text="Register" />
 
