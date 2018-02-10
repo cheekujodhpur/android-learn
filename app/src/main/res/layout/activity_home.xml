@@ -7,12 +7,63 @@
     tools:context="org.wncc_iitb.papita.HomeActivity">
 
     <TextView
-        android:id="@+id/home_text_view"
+        android:id="@+id/rec_email_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
+        android:text="@string/receipent_email_id"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <EditText
+        android:id="@+id/rec_email_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Enter receipent email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rec_email_label"
+        app:layout_constraintTop_toBottomOf="@+id/rec_email_label" />
+
+    <TextView
+        android:id="@+id/email_content_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Content"
+        app:layout_constraintStart_toStartOf="@+id/rec_email_label"
+        app:layout_constraintTop_toBottomOf="@+id/rec_email_text" />
+
+    <EditText
+        android:id="@+id/email_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter email"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="6"
+        android:gravity="top|left"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="@+id/rec_email_label"
+        app:layout_constraintEnd_toEndOf="@+id/rec_email_text"
+        app:layout_constraintTop_toBottomOf="@+id/email_content_label" />
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/colorSecondaryDark"
+        android:text="Send"
+        android:textColor="@color/colorTextLight"
+        app:layout_constraintTop_toBottomOf="@+id/email_content"
+        app:layout_constraintEnd_toEndOf="@+id/rec_email_text" />
+
 </android.support.constraint.ConstraintLayout>

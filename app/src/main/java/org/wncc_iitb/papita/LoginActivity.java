@@ -3,13 +3,21 @@ package org.wncc_iitb.papita;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
+
+    protected void onResume(){
+        super.onResume();
+        EditText emailEditText = findViewById(R.id.email_text);
+        EditText passwordEditText = findViewById(R.id.password_edit_text);
+        emailEditText.setText("");
+        passwordEditText.setText("");
+        emailEditText.requestFocus();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
